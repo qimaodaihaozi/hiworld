@@ -1,0 +1,12 @@
+<!DOCTYPE html><!-- <div th:fragment="xxxx">将多个地方出现的元素块用fragment包起来使用 home页面就是这几个html组合  -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="include/fore/header::html" ></head>
+<body>
+<div id="workingArea">
+    <div th:replace="include/fore/top::html" ></div>
+    <div th:replace="include/fore/search::html" ></div>
+    <div th:replace="include/fore/home/homePage::html" ></div>
+    <div th:replace="include/fore/footer::html" ></div>
+</div>
+</body>
+</html>

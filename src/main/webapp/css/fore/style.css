@@ -1,0 +1,2299 @@
+/*.show {*/
+    /*border: 1px dotted skyblue !important;*/
+/*}*/
+
+body {
+    font-size: 12px;
+    font-family: Arial;
+    min-width: 1024px; /*最小宽度*/
+    /* 	width:1920px; */
+}
+
+a { /* 	所有的超链，都以灰色#999 形式表现出来 */
+    color: #999;
+}
+
+a:hover { /* 	红色 */
+    text-decoration: none;
+    color: #C40000;
+}
+
+/*置顶导航起点*/
+nav.top { /*<nav> 标签定义导航链接的部分。  使用 nav class="top"  nav元素和div元素一样都是用来进行布局的。     */
+    padding-top: 5px;
+    padding-bottom: 5px; /*下内边距是5px*/
+    border-bottom-style: solid;/*下边框的实线*/
+    border-bottom-width: 1px;
+    border-bottom-color: #e7e7e7; /* 下边缘有1个像素的实线边框，颜色是比背景色#f2f2f2略深的#e7e7e7    */
+}
+
+.redColor {
+    color: #C40000;
+}
+
+
+
+nav.top span {
+    /*<span> 标签被用来组合文档中的行内元素
+    margin-right: 20px; /*右外边距 */
+}
+
+nav.top span, nav.top a { /* 置顶导航里的span和超链   逗号并列空格包含 nav元素 class=top 下的span的效果 */
+    color: #999;
+    margin: 0px 10px 0px 10px; /*有左右外边距10px，但是没有上下外边距  上右下左*/
+}
+
+nav.top a:hover { /*hover选择器 当鼠标移动到超链上的时候，颜色变*/
+    color: #C40000;
+}
+
+nav.top {
+    background-color: #f2f2f2; /*nav class = top背景色灰*/
+}
+
+nav.top div.row div {
+    margin: 5px 0px;/*上下10左右5*/
+}
+
+nav.top div.row div {
+    background-color: lightgray;
+    border: 1px solid gray;
+    text-align: center;
+}
+/*置顶导航终点*/
+
+
+
+/*搜索栏起点*/
+div.searchDiv {/*搜索栏*/
+    background-color: #fed100;/*黄*/
+    width: 400px;
+    margin: 50px auto; /*水平居中有50px上下外边框 跟top和下面分类的距离*/
+    border: transparent;
+    border-radius: 13px;
+    padding: 1px 1px 3px 1px;
+    height: 40px;
+
+}
+
+div.searchDiv input { /*搜索栏中的输入框*/
+    width: 275px;
+    border:transparent;/*input边框透明*/
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    height: 36px;
+    margin: 1px;
+    padding-left: 8px;
+
+}
+
+div.searchDiv button {
+    width: 110px;
+    border: 0px ;
+    background-color: #fed100;
+    color: white;
+    font-size: 20px;
+    font-weight: bold; /*字体加粗*/
+}
+
+div.searchDiv button span
+{
+    font-size: 14px;
+    font-weight:lighter;
+}
+
+/*搜索栏终点*/
+/*简单搜索栏起点*/
+
+div.simpleSearchDiv {
+    background-color: #C40000;
+    width: 300px;
+    margin: 10px 20px 40px;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+
+div.simpleSearchDiv input {
+    width: 225px;
+    border: 1px solid transparent;
+    height: 34px;
+    margin: 2px;
+    outline: none;
+}
+
+div.simpleSearchDiv button {
+    width: 60px;
+    border: 1px solid transparent;
+    background-color: #C40000;
+    color: white;
+    font-size: 14px;
+    /* 	font-weight:bold; */
+}
+/*简单搜索栏终点*/
+
+/*页脚*/
+div.footer {
+    margin: 0px 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #e7e7e7;
+}
+
+div.footer_ensure {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/*页脚结束*/
+
+/*分类和轮播*/
+div.categoryWithCarousel {
+    width: 100%;
+    position: relative;/*相对定位*/
+}
+
+div.carouselBackgroundDiv {/*和图片一样颜色的背景div*/
+    width: 100%;
+    height: 510px;
+    background-color: #E8E8E8;
+    position: absolute;
+    top: 36px;
+
+    z-index: -1; /*Z-index 可用于将在一个元素放置于另一元素之后。-1优先级低*/
+
+}
+
+div.categoryWithCarousel div.headbar {/*导航条*/
+    background-color: #fed100; /*黄*/
+}
+
+div.carousel-of-product {/*轮播div*/
+    width: 1024px;
+    height: 510px;
+    margin: 0px auto;
+}
+
+
+
+div.categoryWithCarousel div.categoryMenu {/*竖排导航条*/
+    width: 200px;
+    background-color: #e2e2e3;
+    /* 	padding-bottom:10px; */
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+div.categoryWithCarousel div.productsAsideCategorys {/*分类对应的推荐商品列表*/
+    width: 825px;
+    height: 510px;
+    background-color: white;
+    margin-left: 220px;
+    display: none;
+    position: absolute;
+    left: 0;/*贴在左边(左外边距在此基础上起作用*/
+    top: 0;
+    z-index: 1;
+}
+
+
+
+div.categoryWithCarousel div.eachCategory { /*每个分类*/
+
+    line-height: 30px;/*文字垂直居中*/
+    padding-left: 10px;/*左右内边距*/
+    font-size: 14px;
+
+}
+div.categoryWithCarousel div.eachCategory:hover {
+    background-color: white;
+}
+
+div.categoryWithCarousel div.eachCategory span {
+    margin-right: 10px;
+}
+div.categoryWithCarousel div.rightMenu {
+    display: inline-block;
+}
+
+
+
+div.categoryWithCarousel div.rightMenu span {/*导航中的span*/
+    margin: 0px 20px 0px 20px;
+}
+
+div.categoryWithCarousel div.rightMenu a {/*导航中的超链接*/
+    font-size: 16px;
+    color: white;
+}
+
+div.categoryWithCarousel div.head {/*导航条中的商品分类字样*/
+    width: 200px;
+    background-color: #333333;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+    display: inline-block;/*设置为内联块 可以不换行水平摆放*/
+}
+
+div.productsAsideCategorys a {/*竖条拉出来 右边的一排排分类*/
+
+    font-size: 14px;
+    margin: 8px;
+}
+
+div.productsAsideCategorys a:hover {
+    color: #C40000;
+    text-decoration: none;
+}
+
+div.productsAsideCategorys div.row {
+    margin: 20px 80px 0px 80px;
+}
+
+div.productsAsideCategorys div.row div.seperator {/*每一行的分隔符*/
+    margin-top: 20px;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #e7e7e7;
+}
+
+div.categoryMenu a {/*分类菜单*/
+    color: #000;
+}
+
+div.categoryMenu a:hover {/*菜单中的连接悬停状态*/
+    color: lightskyblue;
+    text-decoration: none;/*去掉下划线*/
+}
+
+
+
+div.homepageDiv {
+    position: relative;
+}
+
+img.logo {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    /* 	z-index:-1; */
+}
+
+div.homepageCategoryProducts {/*下半部分整体的产品列表div*/
+    background-color: #F5F5F5;
+    padding: 50px 10px 50px 10px;
+    margin: 10px auto;
+    max-width: 1013px;
+}
+
+div.left-mark {
+    display: inline-block;
+    height: 20px;
+    vertical-align: top;
+    width: 5px;
+    background-color: #19C8A9;
+}
+
+span.categoryTitle {/*分类名称*/
+    font-size: 16px;
+    margin-left: 30px;
+    color: #646464;
+    font-weight: bold;
+}
+/*首页上半部分结束*/
+
+
+
+
+div.productItem {/*产品项*/
+    width: 189px;
+    height: 285px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 8px 4px;
+    float: left;/*向左漂浮，这样使得所有的产品项可以水平摆放*/
+    cursor: pointer;
+}
+
+a.productItemDescLink {/*产品超链*/
+    display: inline-block;/*显示为内联*/
+    height: 66px;
+}
+
+div.productItem:hover {
+    border: 1px solid #fed100;
+}
+
+div.productItem span.productItemDesc {/*产品描述信息*/
+    font-size: 12px;
+    color: #666666;
+    display: block;/*块状显示 自动换行*/
+    padding: 16px;
+}
+
+div.productItem span.productPrice {
+    font-size: 16px;
+    color: #FF003A;
+    display: block;
+    padding-left: 16px;
+    margin-top: -10px;
+}
+
+div.eachHomepageCategoryProducts {
+    margin: 0px 0px 40px 0px;
+}
+
+div.productItem img {
+    width: 187px;
+    height: 190px;
+}
+
+div.productItem img:hover {/*产品t图片鼠标悬停状态变亮*/
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+img.endpng {
+    display: block;
+    width: 82px;
+    margin: 0 auto;
+
+}
+
+/*首页结束*/
+
+/*登录*/
+div.simpleLogo {
+    padding: 32px 0px;
+}
+
+img.loginBackgroundImg {/* 背景图片 以块状显示，自动换行, 并且可以修改宽度*/
+    display: block;
+    margin: 0px auto;
+}
+
+div.loginDivInProductPageModalDiv {
+    width: 350px;
+}
+
+div.deleteConfirmModalDiv {
+    width: 350px;
+}
+
+div.loginDivInProductPage {
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    padding: 60px 25px 80px 25px;
+}
+
+div.loginSmallDiv {
+    background-color: white;
+    position: absolute;
+    right: 180px;
+    top: 180px;
+    width: 350px;
+    height: 400px;
+    padding: 60px 25px 80px 25px;
+}
+
+div.loginErrorMessageDiv {
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    visibility: hidden;
+}
+
+div.loginErrorMessageDiv div.alert {
+    padding: 5px !important;
+}
+
+div.login_acount_text {
+    color: #3C3C3C;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div.loginInput {/*输入框所在div*/
+    border: 1px solid #CBCBCB;
+    margin: 20px 0px;
+}
+
+div.loginInput input {/*输入框*/
+    display: inline-block;
+    border: 0px solid transparent;/*隐藏实线 无边框*/
+    width: 244px;
+    height: 30px;
+    position: relative;
+    left: 6px;
+    top: 6px;
+}
+
+div.loginInput span, div.loginInput input {
+    display: inline-block;
+}
+
+div.loginInput span.loginInputIcon {/*左侧放置图标的span*/
+    margin: 0px;
+    background-color: #CBCBCB;
+    width: 40px;
+    height: 40px;
+}
+
+span.loginInputIcon span.glyphicon {/*用户和密码图标*/
+    font-size: 22px;
+    position: relative;
+    left: 9px;/*向右移动9px*/
+    top: 9px;
+    color: #606060;
+}
+
+button.redButton {/*登录按钮*/
+    color: white;
+    background-color: #C40000;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*分类页面*/
+
+div.categoryPageDiv {/*整个分类div*/
+    max-width: 1013px;
+    margin: 10px auto;
+}
+div.categorySortBar {/*排序按钮栏*/
+    background-color: #FAF9F9;
+    margin: 40px 20px 20px 20px;
+    padding: 4px;
+}
+
+table.categorySortBarTable td {/*排序栏中的两个表格*/
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+    height: 23px;
+}
+
+table.categorySortBarTable {/*排序栏中的两个表格*/
+    border-collapse: collapse;
+    display: inline-table;
+}
+
+table.categorySortBarTable td a {
+    color: #806F66;
+    font-size: 12px;
+}
+
+table.categorySortBarTable td a:hover {
+    color: #C40000;
+}
+
+table.categorySortBarTable td.grayColumn {/*默认选中的那个单元格*/
+    background-color: #F1EDEC;
+}
+
+table.categorySortBarTable td.priceMiddleColumn {/*价格区间中间的棒棒*/
+    width: 10px;
+    vertical-align: middle;
+    color: #CCCCCC;
+}
+
+table.categorySortTable td:hover {
+    background-color: #F1EDEC;
+}
+
+table.categorySortBarTable span.glyphicon {/*排序表格中的Bootstrap图标*/
+    font-size: 10px;
+}
+
+table.categorySortBarTable input {
+    border-width: 0px;
+    height: 100%;
+    width: 50px;
+    font-size: 12px;
+}
+
+/*产品列表页*/
+
+div.categoryProducts {/*产品列表div*/
+    padding: 0px 20px 40px 20px;
+}
+
+div.productUnit {/*产品项*/
+    width: 225px;
+    height: 338px;
+    border: 3px solid #f2f2f2;
+    background-color: white;
+    margin: 12px 5px;
+    float: left;/*向左漂浮，这样可以水平摆放*/
+    padding: 0px;
+}
+
+div.productUnit:hover {
+    width: 225px;
+    border: 3px solid #C40000;
+    padding: 0px;
+}
+
+div.productUnit span.productUnitDesc {
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    padding: 16px;
+}
+
+
+
+div.productUnit span.productPrice {
+    font-size: 20px;
+    color: #CC0000;
+    display: block;
+    padding-left: 4px;
+}
+
+div.productUnit span.productReview {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #EEEEEE;
+
+
+}
+
+div.productUnit a.productLink {/*产品名称*/
+    margin: 10px 0px;
+    color: #333333;
+    font: 0.8em;
+    display: block;
+}
+
+div.productUnit a.productLink:hover {
+    text-decoration: underline;
+    color: #C40000;
+}
+
+div.productUnit a.mallLink {/*商城专卖*/
+    margin: 10px 0px;
+    color: #999999;
+    font: 0.8em;
+    display: block;
+    text-decoration: underline;
+}
+
+div.productUnit a.mallLink:hover {
+    text-decoration: underline;
+    color: #C40000;
+}
+
+div.productUnit div.productInfo {
+    color: #999999;
+}
+
+div.productUnit span.monthDeal{
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    padding-top: 5px;
+    margin-right: 15px;
+}
+div.productUnit span.productReview {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    padding-top: 5px;
+
+}
+
+div.productUnit span.productDealNumber {
+    font-weight: bold;
+    color: #B57C5B;
+}
+
+div.productUnit span.productReviewNumber {
+    font-weight: bold;
+    color: #3388BB;
+}
+
+div.productUnit img.productImage {
+    width: 100%;
+    height: 190px;
+}
+
+div.productUnit div.productInfo {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #EEEEEE;
+}
+
+
+/*产品详情页*/
+div.imgAndInfo {/*图片和基本信息所在的div*/
+    margin: 40px 20px;
+}
+
+div.imgAndInfo img.bigImg {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #F2F2F2;
+}
+
+div.imgAndInfo div.smallImageDiv {
+    width: 80%;
+    margin: 20px auto;
+}
+
+div.imgAndInfo img.smallImage {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+}
+
+div.imgAndInfo img.smallImage:hover {
+    border: 2px solid black;
+}
+
+div.imgInimgAndInfo {
+    width: 400px;
+    float: left;
+}
+
+div.infoInimgAndInfo {/*基本信息div*/
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+div.infoInimgAndInfo div.productTitle {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+div.infoInimgAndInfo div.productSubTitle {
+    color: #DD2727;
+    font-size: 12px;
+    /* 	font-weight:bold; */
+    margin: 0px 10px;
+}
+
+div.infoInimgAndInfo div.juhuasuan {
+    /* 	height:40px; */
+    background-color: #2DA77A;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+div.infoInimgAndInfo div.originalDiv {
+    margin-top: 5px;
+}
+
+div.infoInimgAndInfo div.promotionDiv {
+    margin-top: 0px;
+}
+
+div.infoInimgAndInfo div.productPriceDiv {
+    background-image: url(../../img/site/priceBackground.png);
+    height: 102px;
+    padding: 10px;
+    color: #666666;
+}
+
+div.infoInimgAndInfo span.originalPriceDesc {
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+}
+
+div.infoInimgAndInfo span.promotionPriceDesc {
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+    position: relative;
+    left: 0px;
+    top: -10px;
+}
+
+div.infoInimgAndInfo span.originalPriceYuan {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+div.infoInimgAndInfo span.originalPrice {/*原始价格-价格数字*/
+    font-family: Arial;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: line-through;/*删除线效果*/
+}
+
+div.infoInimgAndInfo span.promotionPriceYuan {/*人民币符号*/
+    font-family: Arial;
+    font-size: 18px;
+    color: #C40000;
+    /*     vertical-align: top; */
+}
+
+div.infoInimgAndInfo span.promotionPrice {/*促销价*/
+    color: #c40000;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    /*     vertical-align: top; */
+    /*     vertical-align: middle; */
+}
+
+div.infoInimgAndInfo div.productSaleAndReviewNumber {/*销量和累计评价共同的div*/
+    margin: 20px 0px;
+    border-top-style: dotted;
+    border-top-color: #C9C9C9;
+    border-top-width: 1px;
+    border-bottom-style: dotted;/*下边框虚线*/
+    border-bottom-color: #C9C9C9;
+    border-bottom-width: 1px;
+    padding: 10px;
+}
+
+div.infoInimgAndInfo div.productSaleAndReviewNumber div {/*显示为内联，既可以设置大小，又能够不换行*/
+    display: inline-block;
+    width: 49%;/*销量和评价各占一半空间 填满一行*/
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+}
+
+div.infoInimgAndInfo div.productSaleAndReviewNumber div:first-child {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #E5DFDA;
+}
+
+div.infoInimgAndInfo div.productNumber {
+    color: #999999;
+}
+
+div.infoInimgAndInfo span.productNumberSettingSpan {
+    border: 1px solid #999;
+    display: inline-block;
+    width: 43px;
+    height: 32px;
+    padding: 7px 0;
+}
+
+div.infoInimgAndInfo input.productNumberSetting {
+    border: 0px;
+    height: 80%;
+    width: 80%;
+}
+
+div.productNumber span.glyphicon {
+    font-size: 6px;
+}
+
+div.productNumber span.arrow {/*确保垂直向上对齐*/
+    display: inline-block;
+    width: 22px;
+    height: 32px;
+    vertical-align: top;
+}
+
+div.productNumber span.updown img {/*上下箭头所使用的图片*/
+    display: inline-block;/*设置成内联块，可以调整其垂直向上对齐*/
+    vertical-align: top;/*updown*/
+}
+
+div.productNumber span.updown {/*上下箭头所在的两个span*/
+    border: 1px solid #999;
+    display: block;
+    width: 20px;
+    height: 14px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+div.productNumber span.updownMiddle {/*上下箭头留空隙*/
+    height: 4px;
+    display: block;
+}
+
+div.serviceCommitment {/*服务承诺信息所在div*/
+    margin: 20px 0px;
+}
+
+div.infoInimgAndInfo span.serviceCommitmentDesc {/*服务承诺四个字所在span*/
+    color: #999999;
+}
+
+div.infoInimgAndInfo span.serviceCommitmentLink a {
+    color: #666666;
+}
+
+
+
+.boldWord {/*销量和累计评价后的数字*/
+    font-weight: bold;/*粗体*/
+}
+
+div.buyDiv {
+     margin: 20px auto;
+     text-align: center;
+ }
+
+
+div.buyDiv button {/*立即购买和加入购物车按钮*/
+    display: inline-block;
+    margin: 0px 10px;
+    width: 180px;
+    height: 40px;
+}
+
+button.buyButton {/*立刻购买*/
+    border: 1px solid #C40000;
+    background-color: #FFEDED;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    /* 	font-weight:700; */
+    color: #C40000;
+    font-family: arial;
+}
+
+button.addCartButton {/*加入购物车前按钮*/
+    border: 1px solid #C40000;
+    background-color: #C40000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    /* 	font-weight:700; */
+    color: white;
+    font-family: arial;
+}
+
+button.addCartButton span.glyphicon {/*加入购物车前的图标*/
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+/*产品详情页上半部分完*/
+
+/*产品详情页下半部分*/
+div.productDetailDiv {/*产品详情div*/
+    width: 790px;
+    margin: 40px auto;
+}
+
+div.productReviewDiv {
+    width: 790px;
+    margin: 40px auto;
+    /* 	display:none; */
+}
+
+div.productReviewContentPart {
+    padding-top: 50px;
+}
+
+div.productDetailTopPart {
+    border: 1px solid #DFDFDF;
+    border-left-width: 0px;
+}
+
+div.productReviewTopPart {
+    border: 1px solid #DFDFDF;
+}
+
+div.productParamterPart {
+    border: 1px solid #DFDFDF;
+    padding: 40px;
+}
+
+div.productParamter {/*产品参数项*/
+    color: #999999;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div.productParamterList span {
+    display: block;
+    width: 220px;
+    float: left;
+    padding: 8px 0px;
+    color: #666666;
+}
+
+a.selected {/*被选中的超链*/
+    border-left: 1px solid #cfbfb1;
+    border-right: 1px solid #cfbfb1;
+    color: #b10000;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 90px;
+    text-align: center;
+    position: relative;
+}
+
+a.selected:after {/*使用:after 为超链上方加一个天猫色的美人尖*/
+    border-color: #b00000 transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+a.selected:before {/*使用:before为超链上方加一个天猫色的横条*/
+    border-color: #b00000;
+    border-style: solid;
+    border-width: 1px;
+    content: "";
+    display: block;
+    width: 90px;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    margin-left: -1px;
+}
+
+a.productDetailTopReviewLink {
+    padding: 0px 20px;
+    border-right: 1px dotted #D2D2D2;
+    color: #333333;
+}
+
+span.productDetailTopReviewLinkNumber {
+    color: #3355B9;
+}
+
+span.productReviewTopReviewLinkNumber {
+    color: #3355B9;
+}
+
+div.productDetailImagesPart img {
+    display: block;
+    margin 20px 0px;
+    width: 790px;
+}
+
+a.productReviewTopPartSelectedLink {
+    padding: 0px 20px;
+    color: #333333;
+}
+
+div.productReviewItem {
+    border-bottom: 1px solid #E3E3E3;
+    margin: 10px 0px;
+}
+
+div.productReviewItem div.productReviewItemDesc {
+    width: 80%;
+    display: inline-block;
+    color: #333333;
+    height: 94px;
+    margin: 5px 20px;
+    float: left;
+}
+
+div.productReviewItem div.productReviewItemUserInfo {
+    color: #404040;
+    margin: 5px 20px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+div.productReviewItemContent {
+    /* 	margin:0px 0px -30px 0px; */
+
+}
+
+div.productReviewItemDate {
+    margin: 15px 0px 0px 0px;
+    color: #CCCCCC;
+}
+
+/*产品详情页完 点立即购买到结算页*/
+
+/* 结算页 头部和收货地址*/
+span.userInfoGrayPart {
+    color: #999999;
+}
+
+div.buyPageDiv { /*结算页面div*/
+    margin: 20px auto;
+    max-width: 1013px;
+}
+
+
+
+div.buyPageDiv button {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 180px;
+    height: 40px;
+}
+
+
+
+div.address {/*地址div*/
+    margin: 20px 5px;
+    text-align: left;
+}
+
+div.addressTip, div.productListTip {/*输入收货地址几个字*/
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+table.addressTable {/*地址信息表格*/
+    margin: 20px 20px;
+    width: 600px;
+}
+
+table.addressTable td.firstColumn {
+    width: 100px;
+}
+
+table.addressTable td {
+    color: #333333;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 5px;
+    text-align: left;
+    height: 30px;
+    font-size: 12px;
+}
+
+span.redStar {/*星号*/
+    color: red;
+    font-size: 8px;
+}
+
+table.addressTable td input {/*输入框*/
+    border: 1px solid #AFAFAF;
+    width: 200px;
+}
+
+table.addressTable td textarea {/*详细地址文本域*/
+    border: 1px solid #AFAFAF;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+
+
+
+table.productListTable {/*产品列表所在table*/
+    width: 100%;
+    border-collapse: separate;
+}
+
+table.productListTable th {/*标题栏每个单元格 单价数量小计*/
+    color: #999999;
+    font-family: 宋体;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+th.productListTableFirstColumn {/*标题栏第一列*/
+    text-align: left !important;
+}
+
+table.productListTable tr.rowborder td {
+    background-color: #b2d1ff;
+    border-right: 2px solid #fff;
+    height: 3px;
+}
+
+img.orderItemImg {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #E9E9E9;
+}
+
+tr.orderItemTR td {
+    padding: 10px 0px;
+}
+
+a.orderItemProductLink {
+    color: #666666;
+    display: block;
+}
+
+a.orderItemProductLink:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+td.orderItemProductInfo {
+    text-align: left;
+}
+
+td.orderItemProductInfo img {
+    height: 16px;
+}
+
+span.orderItemProductPrice, span.orderItemProductNumber {
+    color: #000000;
+}
+
+span.orderItemUnitSum {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+tr.orderItemTR td {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+tbody.productListTableTbody td {
+    text-align: center;
+    font-size: 12px;
+}
+
+tbody.productListTableTbody td.orderItemFirstTD {
+    text-align: left;
+}
+
+tbody.productListTableTbody td.orderItemProductInfo {
+    text-align: left;
+}
+
+td.orderItemFirstTD, td.orderItemLastTD {
+    border-bottom: 0px solid black !important;
+}
+
+label.orderItemDeliveryLabel {
+    color: #666666;
+    font-family: 宋体;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+select.orderItemDeliverySelect {
+    width: 100px;
+    height: 23px;
+}
+
+div.orderItemSumDiv span {
+    color: #999999;
+}
+
+div.orderItemSumDiv {
+    padding: 20px;
+    border-top: 2px solid #B4D0FF;
+    background-color: #F2F6FF;
+    height: 50px;
+}
+
+textarea.leaveMessageTextarea {
+    border: 1px solid #FFAD35;
+    width: 250px;
+    height: 60px;
+    resize: none;
+}
+
+span.leaveMessageText {
+
+    float: left;
+}
+
+
+
+div.orderItemTotalSumDiv { /*合计div  给卖家留言那行*/
+    margin: 40px;
+    height: 40px;
+}
+
+div.orderItemTotalSumDiv span {
+    color: #999999;
+}
+
+span.orderItemTotalSumSpan {/*实付款金额*/
+    color: #C40000 !important;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px dotted #F2F6FF;
+}
+
+div.submitOrderDiv {
+    height: 40px;
+    margin: 20px 0px;
+}
+
+button.submitOrderButton {/*提交订单按钮*/
+    border: 1px solid #C40000;
+    background-color: #C40000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    float: right;
+}
+
+/*结算页完*/
+
+/*支付页面*/
+div.aliPayPageLogo {/*二维码所在div*/
+    margin: 20px;
+}
+
+div.aliPayPageDiv {
+    text-align: center;
+    padding-bottom: 40px;
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+span.confirmMoneyText {/*扫一扫付款*/
+    color: #4D4D4D;
+}
+
+span.confirmMoney {/*金额*/
+    display: block;
+    color: #FF6600;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+
+button.confirmPay {/*确认支付按钮*/
+    background-color: #00AAEE;
+    border: 1px solid #00AAEE;
+    text-align: center;
+    line-height: 31px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    width: 107px;
+    margin-top: 20px;
+}
+/*支付页面结束*/
+
+div.payedDiv {/*支付成功页面开始*/
+    border: 1px solid #D4D4D4;
+    max-width: 1013px;
+    margin: 10px auto 20px auto;
+}
+
+div.payedTextDiv {/*您已成功付款字样所在div*/
+    height: 61px;
+    background-color: #ECFFDC;
+    padding: 17px 0px 0px 25px;
+}
+
+div.payedTextDiv span {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+div.payedAddressInfo {/*地址信息所在div*/
+    padding: 26px 35px;
+}
+
+
+
+span.payedInfoPrice {
+    color: #B10000;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: arial;
+}
+
+a.payedCheckLink {
+    color: #2D8CBA;
+}
+
+a.payedCheckLink:hover {
+    color: #2D8CBA;
+    text-decoration: underline;
+}
+
+div.paedCheckLinkDiv {/*查看已买到的宝贝所在div*/
+    margin-left: 38px;
+}
+
+div.payedSeperateLine {/*分割线*/
+    border-top: 1px dotted #D4D4D4;
+    margin: 0px 31px;
+}
+/*支付成功页面结束*/
+
+/*查看我的购物车页面开始*/
+div.cartDiv {/*整个购物车div*/
+    max-width: 1013px;
+    margin: 10px auto;
+    color: black;
+}
+
+span.cartTitlePrice {
+    color: #C40000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+div.cartTitle button {/*上面的结算按钮*/
+    background-color: #AAAAAA;
+    border: 1px solid #AAAAAA;
+    color: white;
+    width: 53px;
+    height: 25px;
+    border-radius: 2px;
+}
+
+table.cartProductTable {/*商品table*/
+    width: 100%;
+    font-size: 12px;
+}
+table.cartProductTable th.operation {
+    width: 80px;
+}
+
+table.cartProductTable th {/*表头信息的每一列*/
+    font-weight: normal;
+    color: #3C3C3C;
+    padding: 20px 20px;
+}
+table.cartProductTable th.selectAndImage {/*图片所在列*/
+    width: 150px;
+}
+
+img.cartProductImg {
+    padding: 1px;
+    border: 1px solid #EEEEEE;
+    width: 80px;
+    height: 80px;
+}
+
+a.cartProductLink {
+    color: #3C3C3C;
+}
+
+a.cartProductLink:hover {
+    color: #C40000;
+    text-decoration: underline;
+}
+
+div.cartProductLinkOutDiv {
+    position: relative;
+    height: 80px;
+}
+
+div.cartProductLinkInnerDiv {/*产品连接下面的三个图标*/
+    position: absolute;
+    bottom: 0;/*贴在下面*/
+    height: 20px;
+}
+
+tr.cartProductItemTR td {/*商品所在的每一列*/
+    padding: 20px 20px;
+}
+
+tr.cartProductItemTR {/*商品所在的每一行*/
+    border: 1px solid #CCCCCC;
+}
+
+span.cartProductItemOringalPrice {/*原始价格*/
+    text-decoration: line-through;
+    color: #9C9C9C;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+span.cartProductItemPromotionPrice {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #C40000;
+}
+
+span.cartProductItemSmallSumPrice {/*小计金额*/
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #C40000;
+}
+
+div.cartProductChangeNumberDiv {
+    border: solid 1px #E5E5E5;
+    width: 80px;
+}
+
+div.cartProductChangeNumberDiv input {/*数量输入框*/
+    border: solid 1px #AAAAAA;
+    width: 42px;
+    display: inline-block;
+}
+
+div.cartProductChangeNumberDiv a {/*增加和减少*/
+    text-decoration: none;
+}
+
+div.cartProductChangeNumberDiv a {
+    width: 14px;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+img.cartProductItemIfSelected, img.selectAllItem {/*选择框是一个图片，当鼠标放上去呈现点击状*/
+    cursor: pointer;
+}
+
+div.cartFoot {/*购物车的页脚*/
+    background-color: #E5E5E5;
+    line-height: 50px;
+    margin: 20px 0px;
+    color: black;
+    padding-left: 20px;
+}
+
+span.cartSumNumber {/*商品合计数量*/
+    color: #C40000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+span.cartSumPrice {/*下面的价格*/
+    color: #C40000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div.cartFoot button {/*下面的结算按钮*/
+    background-color: #AAAAAA;
+    border: 0px solid #AAAAAA;
+    color: white;
+    height: height%;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    /* 	border-radius: 2px; */
+}
+
+/*购物车结束*/
+/*我的订单页开始*/
+div.boughtDiv {/*订单页面*/
+    max-width: 1013px;
+    margin: 10px auto;
+}
+div.orderType div.selectedOrderType {
+    border-bottom: 2px solid #C40000;
+}
+
+div.orderType div {/*各种订单类型*/
+    border-bottom: 2px solid #E8E8E8;
+    float: left;
+}
+
+table.orderListTitleTable {/*订单列表标题所在表格 宝贝单价 数量 实付款*/
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    margin: 20px 0px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+table.orderListTitleTable td {/*订单列表标题宝贝单价等等 的列加垂直内边距12px*/
+    padding: 12px 0px;
+}
+
+div.orderType a {
+    border-right: 1px solid #E8E8E8;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+div.orderType div.selectedOrderType a {
+    color: #C40000;
+}
+
+div.orderType a:hover {
+    color: #C40000;
+    text-decoration: none;
+}
+
+div.orderTypeLastOne {
+    overflow: hidden;
+    float: none !important;
+    border-bottom: 2px solid #E8E8E8;
+}
+
+a.noRightborder {/*待评价右边的边框去除*/
+    border-right-width: 0px !important;
+}
+
+table.orderListItemTable {/*订单项目所在表格*/
+    border: 2px solid #ECECEC;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+table.orderListItemTable:hover {/*表格悬停状态*/
+    border: 2px solid #aaa !important;
+}
+
+tr.orderListItemFirstTR {/*标题行灰色*/
+    background-color: #F1F1F1;
+    font-size: 12px;
+}
+
+table.orderListItemTable td {
+    padding: 8px 10px;
+}
+
+
+span.orderListItemDelete {
+    display: inline-block;
+    margin: 0px 10px;
+    color: #999999;
+    font-size: 16px;
+}
+
+div.orderListItemProductLinkOutDiv {/*产品连接外部div*/
+    position: relative;
+    height: 80px;
+    font-size: 12px;
+}
+
+div.orderListItemProductLinkInnerDiv {/*三个图标所在div*/
+    position: absolute;
+    bottom: 0px;
+}
+
+div.orderListItemProductOriginalPrice {
+    color: #999999;
+    font-size: 14px;
+}
+
+div.orderListItemProductPrice {
+    color: #3C3C3C;
+    font-size: 14px;
+}
+
+div.orderListItemProductRealPrice {
+    color: #3C3C3C;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.orderListItemPriceWithTransport {/*运费*/
+    color: #6C6C6C;
+    font-size: 12px;
+}
+
+td.orderListItemProductRealPriceTD {/*按钮所在td*/
+    text-align: center;
+}
+
+button.orderListItemConfirm {/*确认收货按钮*/
+    background-color: #66B6FF;
+    border-radius: 2px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-width: 0px;
+    padding: 6px 12px;
+}
+
+button.orderListItemConfirm:hover {
+    background-color: #118ADB;
+}
+
+button.orderListItemReview {/*评价按钮*/
+    border: 1px solid #DCDCDC;
+    background-color: #fff;
+    border-radius: 2px;
+    color: #3C3C3C;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+}
+
+button.orderListItemReview:hover {
+    border-color: #C40000;
+    color: #C40000;
+}
+
+td.orderItemDeleteTD {
+    text-align: right;
+}
+
+td.orderListItemButtonTD {
+    text-align: center;
+}
+
+span.orderListItemNumber {
+    color: #3C3C3C;
+}
+
+td.orderListItemNumberTD {
+    text-align: center;
+}
+/*我的订单页结束*/
+
+
+
+/*确认收货页面*/
+div.confirmPayPageDiv {
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+div.confirmPayImageDiv {/*确认支付图片所在div*/
+    margin: 40px auto 80px auto;
+    width: 900px;
+    position: relative;/*这里使用相对定位的目的是为了子元素的时间信息可以使用绝对定位*/
+}
+
+div.confirmPayImageDiv div {
+    color: #999999;
+}
+
+div.confirmPayTime1 {/*拍下商品时间*/
+    position: absolute;
+    top: 100px;
+    left: -20px;
+}
+
+div.confirmPayTime2 {/*付款到支付宝时间*/
+    position: absolute;
+    top: 100px;
+    left: 190px;
+}
+
+div.confirmPayTime3 {/*卖家发货时间*/
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+div.confirmPayOrderInfoText {/*同意付款字样*/
+    margin: 10px 10px 0px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ADC8E6;
+}
+
+div.confirmPayOrderItemDiv {/*订单项列表div*/
+    margin: 0px 20px;
+}
+
+div.confirmPayOrderItemText {/*订单信息字样*/
+    margin: 20px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+table.confirmPayOrderItemTable thead {/*表格标题部分*/
+    background-color: #E8F2FF;
+    height: 33px;
+}
+
+table.confirmPayOrderItemTable tr {/*表格的每一行*/
+    border: 1px solid #DDDDDD;
+}
+
+table.confirmPayOrderItemTable {
+    border: 1px solid #DDDDDD;
+    width: 100%;
+}
+
+span.conformPayProductPrice {/*产品单价*/
+    font-size: 18px;
+    font-weight: bold;
+    color: #666666;
+}
+
+table.confirmPayOrderItemTable th, table.confirmPayOrderItemTable td {
+    text-align: center;
+}
+
+table.confirmPayOrderItemTable td {/*订单列表单元格*/
+    padding: 20px;
+}
+
+td.confirmPayOrderItemProductLink {/*产品链接*/
+    text-align: left !important;
+}
+
+div.confirmPayOrderItemText {
+    color: black;
+    font-weight: normal;
+}
+
+span.confirmPayOrderItemSumPrice {/*产品总价*/
+    color: #C40000;
+}
+/*确认收货下半部分*/
+table.confirmPayOrderDetailTable {/*订单详情table*/
+    width: 100%;
+    border-top: 1px solid #DDDDDD;
+}
+
+table.confirmPayOrderDetailTable td {
+    padding: 8px;
+    color: black;
+    font-size: 14px;
+}
+
+div.confirmPayOrderDetailDiv {/*订单详情*/
+    margin: 40px;
+}
+
+
+
+div.confirmPayButtonDiv {/*确认按钮div*/
+    border: 1px solid #F58B0F;
+    margin: 20px;
+}
+
+div.confirmPayWarning {/*支付警告*/
+    margin: 20px 80px;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+button.confirmPayButton:hover {
+    background-color: #F6AE30;
+}
+
+button.confirmPayButton {/*确认按钮*/
+    margin: 20px 80px;
+    width: 67px;
+    height: 30px;
+    border: 1px solid #E67C00;
+    background-color: #F4A21D;
+    border-radius: 4px;
+    color: white;
+}
+/*确认收货结束*/
+
+div.orderFinishDiv {/*收货成功*/
+    border: 1px solid #E5E5E5;
+    padding: 40px;
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+div.orderFinishDiv span {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+
+/*评价开始*/
+
+div.reviewDiv {
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+div.reviewProductInfoRightDiv {/*右侧div*/
+    overflow: hidden;
+    border-top: 1px solid #E7E7E7;
+    padding: 30px 20px;
+}
+
+div.reviewProductInfoImg {/*图片*/
+    border: 1px solid #E7E7E7;
+    width: 464px;
+    text-align: center;
+    float: left;
+}
+
+div.reviewProductInfoRightText {/*产品标题*/
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.reviewProductInfoTablePrice {/*产品价格*/
+    color: #C40000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span.reviewProductInfoTableSellNumber {/*月销量*/
+    color: #C40000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table.reviewProductInfoTable {
+    margin: 20px 10px;
+}
+
+table.reviewProductInfoTable td {
+    padding-bottom: 5px;
+    color: #999999;
+}
+
+div.reviewProductInfoRightBelowDiv {
+    border: 1px solid #F6F5F3;
+    background-color: #FDFBFA;
+    height: 166px;
+    padding: 16px 81px;
+}
+
+
+
+span.reviewProductInfoRightBelowText {/*购买日期信息*/
+    border: 1px solid #EFEFEF;
+    /* 	border-left-width:1px;	 */
+    display: inline-block;
+    width: 200px;
+    height: 42px;
+    padding: 4px;
+    position: relative;
+    left: -4px;
+    top: -7px;
+    color: #666666;
+}
+/*评价下半部分*/
+div.reviewStasticsLeft {/*累计评价左侧div*/
+    width: 180px;
+    float: left;
+}
+
+div.reviewStasticsLeftTop {/*累计评价左上div*/
+    background-color: #C40000;
+    height: 6px;
+}
+
+div.reviewStasticsLeftContent {
+    line-height: 29px;
+    border-left: 1px solid #D5D4D4;
+    border-right: 1px solid #D5D4D4;
+    background-color: #F6F5F1;
+    text-align: center;
+    font-size: 14px;
+    color: #363535;
+    font-weight: bold;
+}
+
+span.reviewStasticsNumber {
+    color: #284CA5;
+}
+
+div.reviewStasticsLeftFoot {
+    height: 6px;
+    border-left: 1px solid #D5D4D4;
+    border-bottom: 1px solid #D5D4D4;
+    background-color: #F6F5F1;
+}
+
+div.reviewStasticsRight {
+    overflow: hidden;
+}
+
+div.reviewStasticsRightEmpty {
+    height: 35px;
+}
+
+div.reviewStasticsFoot {
+    background-color: #F6F5F1;
+    border: 1px solid #D5D4D4;
+    border-left-width: 0px;
+    height: 6px;
+}
+
+div.makeReviewDiv {
+    border: 1px solid #D1CCC8;
+    margin: 20px 0px;
+    background-color: #EFEFEF;
+}
+
+div.makeReviewText {/*其他卖家需要你的建议哦*/
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    margin: 20px 40px;
+}
+
+table.makeReviewTable {/*评价商品表格*/
+    margin: 20px 40px;
+}
+
+table.makeReviewTable td {
+    border: 1px solid #E7E7E7;
+    padding: 10px;
+    background-color: white;
+}
+
+table.makeReviewTable textarea {
+    border-width: 0px;
+    resize: none;
+    width: 420px;
+    height: 120px;
+}
+
+td.makeReviewTableFirstTD {
+    background-color: #F6F6F6;
+}
+
+div.makeReviewButtonDiv {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+div.makeReviewButtonDiv button {
+    width: 72px;
+    height: 26px;
+    border-radius: 2px;
+    background-color: #C40000;
+    color: white;
+    border-width: 0px;
+    font-weight: bold;
+}
+
+/*评价结束*/
+
+/*注册页面*/
+div.registerDiv {
+    margin: 10px 20px;
+    text-align: center;
+}
+
+table.registerTable {/*注册表格*/
+    color: #3C3C3C;
+    font-size: 16px;
+    table-layout: fixed;
+    margin-top: 50px;
+}
+
+table.registerTable td {
+    /* 	border:1px dotted skyblue !important; */
+    padding: 10px 30px;
+}
+
+td.registerTableLeftTD {
+    width: 300px;
+    text-align: right;
+}
+
+td.registerTableRightTD {
+    width: 300px;
+    text-align: left;
+}
+
+td.registerTip {
+    font-weight: bold;
+}
+
+table.registerTable input {/*输入框*/
+    border: 1px solid #DEDEDE;
+    width: 213px;
+    height: 36px;
+    font-size: 14px;
+}
+
+td.registerButtonTD {
+    text-align: center;
+}
+
+table.registerTable button {
+    width: 170px;
+    height: 36px;
+    border-radius: 2px;
+    color: white;
+    background-color: #C40000;
+    border-width: 0px;
+}
+
+table.registerTable {
+    color: #3C3C3C;
+    font-size: 16px;
+    table-layout: fixed;
+    margin-top:50px;
+}
+
+div.registerSuccessDiv {
+    margin: 10px 20px;
+    background-color: #F3FDF6;
+    border: 1px solid #DEF3E6;
+    font-size: 16px;
+    color: #3C3C3C;
+    padding: 20px 130px;
+}
+/*注册结束*/
+
+
+div.searchResultDiv {
+    max-width: 1013px;
+    margin: 10px auto;
+    min-height: 300px;
+}
+
+div.productPageDiv {
+    max-width: 1013px;
+    margin: 10px auto;
+}
+
+div.categoryPictureInProductPageDiv {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+div.reviewStasticsDiv {
+    margin-top: 20px;
+}
+
+div.registerErrorMessageDiv {
+    width: 600px;
+    margin: 0px auto;
+    height: 50px;
+    visibility: hidden;
+}
+
+td.orderItemProductInfoPartTD {
+    border-bottom: solid 1px #ECECEC;
+}
+
+td.orderItemOrderInfoPartTD {
+    border: solid 1px #ECECEC;
+}
+/*评价完 显示的内容*/
+div.reviewDate {
+    width: 100px;
+}
+
+div.reviewDivlistReviewsEach div {
+    display: inline-block;
+}
+
+div.reviewDate {
+    color: #CCCCDD;
+}
+
+div.reviewContent {
+    color: #333333;
+    width: 698px;
+}
+
+div.reviewUserInfo {
+    color: #333333;
+}
+
+div.reviewDivlistReviewsEach {
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+span.reviewUserInfoAnonymous {
+    color: #CCCCDD;
+    margin-left: 5px;
+}
+/*评价显示的内容完*/
+a.productLink {
+    height: 34px;
+}
+
+img.carouselImage {
+    height: 510px !important;
+}
+
+div.noMatch {
+    font-size: 20px;
+    width: 200px;
+    margin: 100px auto;
+    color: #888;
+}
+
+
+
+
+
+table td {
+    font-size: 12px;
+}
+
+input {
+    outline: none;
+}
+
+/*首页悬浮条*/
+li{
+    list-style: none;
+}
+div.wenzi a{
+    text-decoration: none;
+    color: #666;
+}
+div.wenzi a:hover{
+    color:#f10215
+}
+
+/*右侧固定图标菜单栏*/
+.toolbars{
+    position: fixed;
+    top: 0;
+    right: 5px;
+    height: 100%;
+    /* background-color: #7a6e6e;*/
+}
+.toolbars ul{
+    position:absolute;
+    top: 80%;
+    right: 0;
+    transform: translate(0,-40%);
+    z-index: 3;
+}
+.toolbars ul li{
+    width: 50px;
+    height: 60px;
+    /*margin-bottom: 2px;*/
+
+    position: relative;
+    border-bottom: 1px dashed #fff;
+}
+
+
+
+/*鼠标悬浮后的效果*/
+.toolbars ul li{
+    background-color: #fed100;
+}
+
+
+div.wenzi
+{
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/*首页的推荐图片跳转*/
+div.recommend {
+    width: 100%;
+    position: relative;/*相对定位*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.recommend div.content{
+    position: relative;
+
+
+}
+
+div.recommend div.content span{
+    font-size: 20px;
+    position:absolute;
+    color: white;
+    top: 20%;
+    left: 30%;
+
+
+}
+div.recommend div.content h4
+{
+    position:absolute;
+    color: white;
+    top: 30%;
+    left: 30%;
+
+}
+div.recommend div.content h3
+{
+    position:absolute;
+    color: white;
+    top: 40%;
+    left: 30%;
+
+}
+div.recommend div.content2{
+    position: relative;
+
+
+}
+
+div.recommend div.content2 span{
+    font-size: 20px;
+    position:absolute;
+    color:#e01212;
+    top: 20%;
+    left: 10%;
+
+
+}
+div.recommend div.content2 h4
+{
+    position:absolute;
+    color: #7b7b7b;
+    top: 30%;
+    left: 10%;
+
+
+}
+div.recommend div.content2 h3
+{
+    position:absolute;
+    color: black;
+    top: 40%;
+    left: 10%;
+
+}
+div.recommend div.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+div.recommend  img.recommendImg1{
+    height: 280px;
+    width: 570px;
+    margin-left: 180px;
+
+
+    margin-right: 10px;
+}
+div.recommend  img.recommendImg1:hover,img.recommendImg2:hover/*加hover实现触碰动态效果*/
+{
+    border: 1px solid #fed100;
+}
+div.recommend img.recommendImg2{
+    height: 280px;
+    width: 570px;
+
+}

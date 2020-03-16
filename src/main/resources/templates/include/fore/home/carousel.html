@@ -1,0 +1,21 @@
+<div th:fragment="html"> 	<!--bootstrap轮播效果-->
+	<div id="carousel-of-product"  class="carousel-of-product carousel slide1" data-ride="carousel">
+	  <!-- Indicators 轮播指标2个圆点切换 -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-of-product" data-slide-to="0" class="active"></li><!--#carousel-of-product style设置了高宽 中间一部分-->
+	    <li data-target="#carousel-of-product" data-slide-to="1"></li>
+
+	  </ol>
+	
+	  <!-- 轮播项目 -->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img class="carousel carouselImage" src="img/lunbo/1.jpg" >
+			<!--<div class="carousel-caption" style="position: absolute;top: 20px">轮播添加标题的方法</div>-->
+	    </div>
+	    <div class="item">
+	      <img  class="carouselImage" src="img/lunbo/2.jpg" >
+	    </div>
+
+	  </div>
+</div>

@@ -1,0 +1,25 @@
+<div th:fragment="html">
+    <div class="categoryProducts">
+        <div v-for="p in c.products" class="productUnit" :price="p.promotePrice">
+
+            <a :href="'product?pid='+p.id">
+                <img class="productImage" :src="'img/productSingle_middle/'+p.firstProductImage.id+'.jpg'">
+            </a>
+            <span class="productPrice">¥{{p.promotePrice|formatMoneyFilter}} </span>
+
+            <a class="productLink" :href="'product?pid='+p.id">
+                {{p.name|subStringFilter(0,50)}}
+            </a>
+
+            <a class="mallLink" :href="'product?pid='+p.id">商城专卖</a>
+
+            <div class="productInfo">
+                <span class="monthDeal ">月成交 <span class="productDealNumber">{{p.saleCount}}笔</span></span>
+                <span class="productReview">&nbsp;&nbsp;评价<span class="productReviewNumber">{{p.reviewCount}}</span></span>
+            </div>
+
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+</div>
